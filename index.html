@@ -1,0 +1,856 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Inspire Business Group Pvt. Ltd. — Where Dreams Meet Opportunity</title>
+<meta name="description" content="Inspire Business Group brings diverse businesses, people and opportunities together to create a growing ecosystem built on trust, innovation and shared success." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@300;400;500;600;700;800&family=Caveat:wght@600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css?v=13" />
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cpolygon points='50,3 93,26 93,74 50,97 7,74 7,26' fill='%230F1B45'/%3E%3Cpolygon points='50,18 79,33 79,67 50,82 21,67 21,33' fill='none' stroke='%23E8A93B' stroke-width='4'/%3E%3C/svg%3E">
+</head>
+<body>
+
+<!-- ================= NAVBAR ================= -->
+<header class="nav" id="nav">
+  <div class="nav__inner container">
+    <a href="#home" class="nav__logo" aria-label="Inspire Business Group Home">
+      <img src="images/logo.png" alt="Inspire Business Group Pvt Ltd" class="nav__logo-img" />
+      <span class="nav__wordmark">
+        <span class="nav__wordmark-main">Inspire Business Group</span>
+        <span class="nav__wordmark-sub">Pvt Ltd</span>
+      </span>
+    </a>
+
+    <nav class="nav__links" id="navLinks">
+      <a href="index.html" class="nav__link is-active">Home</a>
+      <a href="about.html" class="nav__link">About</a>
+      <a href="lucky-draw.html" class="nav__link">Lucky Draw</a>
+      <a href="gallery.html" class="nav__link">Gallery</a>
+      <a href="contact.html" class="nav__link">Contact</a>
+    </nav>
+
+    <div class="nav__actions">
+      <a href="#join" class="btn btn--gold btn--sm">Join Us <span>→</span></a>
+      <button class="nav__burger" id="navBurger" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<!-- Mobile menu panel -->
+<div class="mobile-menu" id="mobileMenu">
+  <a href="#home" class="mobile-menu__link">Home</a>
+  <a href="#about" class="mobile-menu__link">About</a>
+  <a href="#lucky-draw" class="mobile-menu__link">Lucky Draw</a>
+  <a href="gallery.html" class="mobile-menu__link">Gallery</a>
+  <a href="#contact" class="mobile-menu__link">Contact</a>
+  <a href="#join" class="btn btn--gold mobile-menu__cta">Join Us</a>
+</div>
+
+<main id="home">
+
+  <!-- ================= HERO ================= -->
+  <section class="hero">
+    <div class="hero__grid">
+
+      <div class="hero__panel">
+        <canvas id="heroCanvas" class="hero__canvas"></canvas>
+        <div class="hero__glow hero__glow--1"></div>
+        <div class="hero__glow hero__glow--2"></div>
+
+        <div class="hero__panel-top">
+          <p class="eyebrow eyebrow--light hero__eyebrow reveal">Inspire Business Group<span class="hero__eyebrow-line"></span></p>
+          <h1 class="hero__headline reveal">Where Dreams<br>Meet <span class="text-gold">Opportunity.</span></h1>
+          <p class="hero__sub reveal">Inspire Business Group brings diverse businesses, people and opportunities together to create a growing ecosystem built on trust, innovation and shared success.</p>
+          <div class="hero__ctas reveal">
+            <a href="gallery.html" class="btn btn--gold">Explore Gallery <span>→</span></a>
+            <a href="#join" class="btn btn--ghost">Join Us</a>
+          </div>
+          <div class="hero__stats reveal">
+            <div class="hero__stat">
+              <svg viewBox="0 0 20 20"><circle cx="7" cy="6" r="2.6"/><circle cx="14" cy="6" r="2.2"/><path d="M2 17c0-3 2.2-5.4 5-5.4s5 2.4 5 5.4"/><path d="M12.5 12c2.3.3 4 2.3 4.5 5"/></svg>
+              <span>Diverse<br>Industries</span>
+            </div>
+            <div class="hero__stat">
+              <svg viewBox="0 0 20 20"><path d="M3 17V9M9 17V4M15 17v-6"/></svg>
+              <span>Real<br>Opportunities</span>
+            </div>
+            <div class="hero__stat">
+              <svg viewBox="0 0 20 20"><path d="M4 17c8 0 12-4 12-13-9 0-13 4-13 13"/><path d="M4 17c0-4 2-7 5-9"/></svg>
+              <span>A Brighter<br>Tomorrow</span>
+            </div>
+          </div>
+        </div>
+
+        <p class="hero__tagline reveal">Grow <span class="hero__tagline-dash">|</span> Connect <span class="hero__tagline-dash">|</span> Succeed</p>
+      </div>
+
+      <div class="hero__showcase">
+        <div class="hero__showcase-nav">
+          <button class="hero__arrow" id="heroPrev" aria-label="Previous business">
+            <svg viewBox="0 0 20 20"><path d="M12 4l-6 6 6 6"/></svg>
+          </button>
+          <button class="hero__arrow" id="heroNext" aria-label="Next business">
+            <svg viewBox="0 0 20 20"><path d="M8 4l6 6-6 6"/></svg>
+          </button>
+        </div>
+
+        <div class="hero__track" id="heroTrack">
+
+          <article class="hero__slide" data-accent="orange">
+            <img class="hero__slide-img" src="images/Electronics%20&amp;%20Home%20Appliances.png" alt="Electronics and home appliances" loading="lazy" />
+            <svg class="hero__slide-icon" viewBox="0 0 20 20"><rect x="2" y="3" width="16" height="11" rx="1.5"/><line x1="7" y1="17" x2="13" y2="17"/><line x1="10" y1="14" x2="10" y2="17"/></svg>
+            <span class="hero__slide-num">01</span>
+            <h3 class="hero__slide-title">Electronics &amp; Home Appliances</h3>
+            <p class="hero__slide-desc">Trusted, modern electronics and appliances that bring convenience and quality into every home.</p>
+            <a href="gallery.html" class="hero__slide-more"><span class="hero__slide-more-icon">→</span>Explore More</a>
+            <span class="hero__slide-divider"></span>
+            <p class="hero__slide-tag">Smarter Homes<br>Brighter Lives</p>
+          </article>
+
+          <article class="hero__slide" data-accent="gold">
+            <img class="hero__slide-img" src="images/Gold%20&amp;%20Automobiles.png" alt="Gold and automobiles" loading="lazy" />
+            <svg class="hero__slide-icon" viewBox="0 0 20 20"><path d="M3 13l1.5-5A2 2 0 016.4 6.5h7.2A2 2 0 0115.5 8L17 13"/><rect x="2" y="13" width="16" height="4" rx="1"/><circle cx="6" cy="17" r="1.4"/><circle cx="14" cy="17" r="1.4"/></svg>
+            <span class="hero__slide-num">02</span>
+            <h3 class="hero__slide-title">Gold &amp; Automobiles</h3>
+            <p class="hero__slide-desc">Premium gold and automotive offerings built on trust, purity and lasting value.</p>
+            <a href="gallery.html" class="hero__slide-more"><span class="hero__slide-more-icon">→</span>Explore More</a>
+            <span class="hero__slide-divider"></span>
+            <p class="hero__slide-tag">Lasting Value<br>A Stronger Tomorrow</p>
+          </article>
+
+          <article class="hero__slide" data-accent="teal">
+            <img class="hero__slide-img" src="images/Tourism%20&amp;%20Travel.png" alt="Tourism and travel" loading="lazy" />
+            <svg class="hero__slide-icon" viewBox="0 0 20 20"><path d="M2 11.5L18 2l-6.5 16-2-6.5L2 11.5z"/></svg>
+            <span class="hero__slide-num">03</span>
+            <h3 class="hero__slide-title">Tourism &amp; Travel</h3>
+            <p class="hero__slide-desc">Curated journeys and travel experiences designed around comfort, discovery and ease.</p>
+            <a href="gallery.html" class="hero__slide-more"><span class="hero__slide-more-icon">→</span>Explore More</a>
+            <span class="hero__slide-divider"></span>
+            <p class="hero__slide-tag">New Places<br>Lasting Memories</p>
+          </article>
+
+          <article class="hero__slide" data-accent="orange">
+            <img class="hero__slide-img" src="images/Furniture.png" alt="Modern furniture" loading="lazy" />
+            <svg class="hero__slide-icon" viewBox="0 0 20 20"><path d="M4 11V8a2 2 0 012-2h8a2 2 0 012 2v3"/><rect x="2" y="11" width="16" height="5" rx="1.4"/><line x1="3.5" y1="16" x2="3.5" y2="18"/><line x1="16.5" y1="16" x2="16.5" y2="18"/></svg>
+            <span class="hero__slide-num">04</span>
+            <h3 class="hero__slide-title">Furniture</h3>
+            <p class="hero__slide-desc">Thoughtfully crafted furniture that blends comfort, durability and modern design.</p>
+            <a href="gallery.html" class="hero__slide-more"><span class="hero__slide-more-icon">→</span>Explore More</a>
+            <span class="hero__slide-divider"></span>
+            <p class="hero__slide-tag">Timeless Design<br>Everyday Comfort</p>
+          </article>
+
+          <article class="hero__slide" data-accent="gold">
+            <img class="hero__slide-img" src="images/E-Commerce%20&amp;%20FMCG.png" alt="E-commerce and FMCG" loading="lazy" />
+            <svg class="hero__slide-icon" viewBox="0 0 20 20"><circle cx="7" cy="17" r="1.3"/><circle cx="15" cy="17" r="1.3"/><path d="M2 3h2l1.6 9.4a1.6 1.6 0 001.6 1.3h7a1.6 1.6 0 001.6-1.3L17.5 6H5"/></svg>
+            <span class="hero__slide-num">05</span>
+            <h3 class="hero__slide-title">E-Commerce &amp; FMCG</h3>
+            <p class="hero__slide-desc">Everyday essentials and fast-moving consumer goods delivered through a growing digital marketplace.</p>
+            <a href="gallery.html" class="hero__slide-more"><span class="hero__slide-more-icon">→</span>Explore More</a>
+            <span class="hero__slide-divider"></span>
+            <p class="hero__slide-tag">Wide Selection<br>Fast Delivery</p>
+          </article>
+
+          <article class="hero__slide" data-accent="teal">
+            <img class="hero__slide-img" src="images/Organic%20Agriculture.png" alt="Organic agriculture" loading="lazy" />
+            <svg class="hero__slide-icon" viewBox="0 0 20 20"><path d="M4 17c8 0 12-4 12-13-9 0-13 4-13 13"/><path d="M4 17c0-4 2-7 5-9"/></svg>
+            <span class="hero__slide-num">06</span>
+            <h3 class="hero__slide-title">Organic Agriculture</h3>
+            <p class="hero__slide-desc">Sustainable, organic farming practices that nurture the land and nourish communities.</p>
+            <a href="gallery.html" class="hero__slide-more"><span class="hero__slide-more-icon">→</span>Explore More</a>
+            <span class="hero__slide-divider"></span>
+            <p class="hero__slide-tag">100% Organic<br>Sustainable Growth</p>
+          </article>
+
+          <article class="hero__slide" data-accent="orange">
+            <img class="hero__slide-img" src="images/Builders%20&amp;%20Developers.png" alt="Real estate and property development" loading="lazy" />
+            <svg class="hero__slide-icon" viewBox="0 0 20 20"><rect x="4" y="2" width="12" height="16" rx="1"/><line x1="7" y1="6" x2="9" y2="6"/><line x1="11" y1="6" x2="13" y2="6"/><line x1="7" y1="9.5" x2="9" y2="9.5"/><line x1="11" y1="9.5" x2="13" y2="9.5"/><line x1="7" y1="13" x2="9" y2="13"/><line x1="11" y1="13" x2="13" y2="13"/></svg>
+            <span class="hero__slide-num">07</span>
+            <h3 class="hero__slide-title">Builders &amp; Developers</h3>
+            <p class="hero__slide-desc">Real estate and development projects built on quality construction and long-term value.</p>
+            <a href="gallery.html" class="hero__slide-more"><span class="hero__slide-more-icon">→</span>Explore More</a>
+            <span class="hero__slide-divider"></span>
+            <p class="hero__slide-tag">Quality Construction<br>Long-Term Value</p>
+          </article>
+
+        </div>
+
+        <div class="hero__dots" id="heroDots" aria-hidden="true"></div>
+        <p class="hero__caption">Building a brighter tomorrow, together.</p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ================= INTRO / ABOUT ================= -->
+  <section class="intro section" id="about">
+    <div class="container intro__grid">
+      <div class="intro__content reveal">
+        <p class="eyebrow">Who We Are</p>
+        <h2 class="display-heading">One Group:<br><span class="text-gold">Many</span><br>Possibilities.</h2>
+        <span class="intro__rule" aria-hidden="true"></span>
+
+        <p class="intro__text">Inspire Business Group is a diversified business ecosystem operating across electronics, gold &amp; automobiles, travel, furniture, e-commerce, agriculture and real estate. We connect entrepreneurs, customers and partners under one trusted umbrella — sharing knowledge, resources and momentum so every venture grows faster together than it could alone.</p>
+        <p class="intro__text">From first-time promoters to seasoned business owners, Inspire Business Group gives every member the platform, the network and the support to turn ambition into a sustainable enterprise.</p>
+        <a href="gallery.html" class="btn btn--gold">Discover Inspire Business Group <span>→</span></a>
+
+        <div class="stats">
+          <div class="stat">
+            <span class="stat__num" data-count="7">0</span><span class="stat__suffix">+</span>
+            <p>Business Verticals</p>
+          </div>
+          <div class="stat">
+            <span class="stat__num" data-count="10000">0</span><span class="stat__suffix">+</span>
+            <p>Growing Community</p>
+          </div>
+          <div class="stat">
+            <span class="stat__num" data-count="100">0</span><span class="stat__suffix">%</span>
+            <p>Customer Focused</p>
+          </div>
+          <div class="stat">
+            <span class="stat__num" data-count="1">0</span><span class="stat__suffix">&nbsp;Group</span>
+            <p>Future Driven</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="intro__visual reveal">
+        <span class="intro__script">Diverse<br>Growth<br>Stronger<br>Together</span>
+
+        <div class="orbit">
+          <span class="orbit__glow orbit__glow--1" aria-hidden="true"></span>
+          <span class="orbit__glow orbit__glow--2" aria-hidden="true"></span>
+
+          <figure class="orbit__item orbit__item--furniture">
+            <img src="images/Furniture.png" alt="Furniture" loading="lazy" />
+          </figure>
+          <figure class="orbit__item orbit__item--electronics">
+            <img src="images/Electronics%20&amp;%20Home%20Appliances.png" alt="Electronics and home appliances" loading="lazy" />
+          </figure>
+          <figure class="orbit__item orbit__item--gold">
+            <img src="images/Gold%20&amp;%20Automobiles.png" alt="Gold and automobiles" loading="lazy" />
+          </figure>
+          <figure class="orbit__item orbit__item--travel">
+            <img src="images/Tourism%20&amp;%20Travel.png" alt="Tourism and travel" loading="lazy" />
+          </figure>
+          <figure class="orbit__item orbit__item--ecommerce">
+            <img src="images/E-Commerce%20&amp;%20FMCG.png" alt="E-commerce and FMCG" loading="lazy" />
+          </figure>
+          <figure class="orbit__item orbit__item--agriculture">
+            <img src="images/Organic%20Agriculture.png" alt="Organic agriculture" loading="lazy" />
+          </figure>
+          <figure class="orbit__item orbit__item--realestate">
+            <img src="images/Builders%20&amp;%20Developers.png" alt="Real estate and property development" loading="lazy" />
+          </figure>
+
+          <div class="orbit__center">
+            <span class="hex-mark orbit__center-mark" aria-hidden="true">
+              <svg viewBox="0 0 100 100"><polygon points="50,3 93,26 93,74 50,97 7,74 7,26"/></svg>
+            </span>
+            <span class="orbit__center-name">Inspire</span>
+            <span class="orbit__center-sub">Business Group</span>
+            <span class="orbit__center-tag">Together<br>Towards A Brighter<br>Tomorrow</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= OUR BUSINESSES ================= -->
+  <section class="section businesses" id="businesses">
+    <div class="container">
+      <div class="section__head section__head--center reveal">
+        <p class="eyebrow">What We Do</p>
+        <h2 class="display-heading">Our Businesses.</h2>
+        <p class="businesses__sub">One company, many opportunities.</p>
+      </div>
+
+      <div class="biz-grid">
+        <article class="biz-card reveal" data-accent="orange">
+          <img class="biz-card__img" src="images/Electronics%20&amp;%20Home%20Appliances.png" alt="Electronics and home appliances" loading="lazy" />
+          <span class="biz-card__num">01</span>
+          <h3 class="biz-card__title">Electronics &amp; Home Appliances</h3>
+          <p class="biz-card__desc">Trusted, modern electronics and appliances that bring convenience and quality into every home.</p>
+          <a href="gallery.html" class="biz-card__more"><span class="biz-card__more-icon">→</span>Explore More</a>
+          <span class="biz-card__divider"></span>
+          <p class="biz-card__tag">Smarter Homes<br>Brighter Lives</p>
+        </article>
+
+        <article class="biz-card reveal" data-accent="gold">
+          <img class="biz-card__img" src="images/Gold%20&amp;%20Automobiles.png" alt="Gold and automobiles" loading="lazy" />
+          <span class="biz-card__num">02</span>
+          <h3 class="biz-card__title">Gold &amp; Automobiles</h3>
+          <p class="biz-card__desc">Premium gold and automotive offerings built on trust, purity and lasting value.</p>
+          <a href="gallery.html" class="biz-card__more"><span class="biz-card__more-icon">→</span>Explore More</a>
+          <span class="biz-card__divider"></span>
+          <p class="biz-card__tag">Lasting Value<br>A Stronger Tomorrow</p>
+        </article>
+
+        <article class="biz-card reveal" data-accent="teal">
+          <img class="biz-card__img" src="images/Tourism%20&amp;%20Travel.png" alt="Tourism and travel" loading="lazy" />
+          <span class="biz-card__num">03</span>
+          <h3 class="biz-card__title">Tourism &amp; Travel</h3>
+          <p class="biz-card__desc">Curated journeys and travel experiences designed around comfort, discovery and ease.</p>
+          <a href="gallery.html" class="biz-card__more"><span class="biz-card__more-icon">→</span>Explore More</a>
+          <span class="biz-card__divider"></span>
+          <p class="biz-card__tag">New Places<br>Lasting Memories</p>
+        </article>
+
+        <article class="biz-card reveal" data-accent="orange">
+          <img class="biz-card__img" src="images/Furniture.png" alt="Modern furniture" loading="lazy" />
+          <span class="biz-card__num">04</span>
+          <h3 class="biz-card__title">Furniture</h3>
+          <p class="biz-card__desc">Thoughtfully crafted furniture that blends comfort, durability and modern design.</p>
+          <a href="gallery.html" class="biz-card__more"><span class="biz-card__more-icon">→</span>Explore More</a>
+          <span class="biz-card__divider"></span>
+          <p class="biz-card__tag">Timeless Design<br>Everyday Comfort</p>
+        </article>
+
+        <article class="biz-card reveal" data-accent="gold">
+          <img class="biz-card__img" src="images/E-Commerce%20&amp;%20FMCG.png" alt="E-commerce and FMCG" loading="lazy" />
+          <span class="biz-card__num">05</span>
+          <h3 class="biz-card__title">E-Commerce &amp; FMCG</h3>
+          <p class="biz-card__desc">Everyday essentials and fast-moving consumer goods delivered through a growing digital marketplace.</p>
+          <a href="gallery.html" class="biz-card__more"><span class="biz-card__more-icon">→</span>Explore More</a>
+          <span class="biz-card__divider"></span>
+          <p class="biz-card__tag">Wide Selection<br>Fast Delivery</p>
+        </article>
+
+        <article class="biz-card reveal" data-accent="teal">
+          <img class="biz-card__img" src="images/Organic%20Agriculture.png" alt="Organic agriculture" loading="lazy" />
+          <span class="biz-card__num">06</span>
+          <h3 class="biz-card__title">Organic Agriculture</h3>
+          <p class="biz-card__desc">Sustainable, organic farming practices that nurture the land and nourish communities.</p>
+          <a href="gallery.html" class="biz-card__more"><span class="biz-card__more-icon">→</span>Explore More</a>
+          <span class="biz-card__divider"></span>
+          <p class="biz-card__tag">100% Organic<br>Sustainable Growth</p>
+        </article>
+
+        <article class="biz-card reveal" data-accent="orange">
+          <img class="biz-card__img" src="images/Builders%20&amp;%20Developers.png" alt="Real estate and property development" loading="lazy" />
+          <span class="biz-card__num">07</span>
+          <h3 class="biz-card__title">Builders &amp; Developers</h3>
+          <p class="biz-card__desc">Real estate and development projects built on quality construction and long-term value.</p>
+          <a href="gallery.html" class="biz-card__more"><span class="biz-card__more-icon">→</span>Explore More</a>
+          <span class="biz-card__divider"></span>
+          <p class="biz-card__tag">Quality Construction<br>Long-Term Value</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= VISION & MISSION ================= -->
+  <section class="section vision" id="vision-mission">
+    <div class="container">
+      <div class="section__head section__head--center section__head--tight reveal">
+        <p class="eyebrow eyebrow--ruled">What Drives Us</p>
+        <h2 class="display-heading">Vision &amp; Mission</h2>
+        <div class="feature-divider" aria-hidden="true">
+          <span></span>
+          <svg viewBox="0 0 24 24"><path d="M12 22V10"/><path d="M12 10C12 6 8 4 4 4c0 4 2 8 8 8z"/><path d="M12 14c0-4 4-6 8-6 0 4-2 8-8 8"/></svg>
+          <span></span>
+        </div>
+        <p class="feature-tagline">Guided By Purpose. Driven By Impact.</p>
+      </div>
+
+      <div class="vm-grid">
+        <div class="vm-card reveal" data-accent="gold">
+          <span class="vm-card__icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><path d="M1 12s4-7 11-7 11 7 11 7-4 7-11 7-11-7-11-7z"/><circle cx="12" cy="12" r="3.2"/></svg>
+          </span>
+          <h3>Our Vision</h3>
+          <span class="vm-card__rule"></span>
+          <p>To build a trusted, diversified business ecosystem that empowers entrepreneurs and communities to grow together, creating lasting value across every industry we touch.</p>
+          <span class="vm-card__watermark" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><path d="M1 12s4-7 11-7 11 7 11 7-4 7-11 7-11-7-11-7z"/><circle cx="12" cy="12" r="3.2"/></svg>
+          </span>
+        </div>
+        <div class="vm-card reveal" data-accent="navy">
+          <span class="vm-card__icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><circle cx="11" cy="13" r="7"/><circle cx="11" cy="13" r="4"/><circle cx="11" cy="13" r="1.2" fill="currentColor" stroke="none"/><path d="M15.5 8.5L21 3M21 3h-4.4M21 3v4.4"/></svg>
+          </span>
+          <h3>Our Mission</h3>
+          <span class="vm-card__rule"></span>
+          <p>To deliver quality, innovation and trust across electronics, gold &amp; automobiles, travel, furniture, e-commerce, agriculture and real estate — while giving every member the platform to turn ambition into achievement.</p>
+          <span class="vm-card__watermark" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><circle cx="11" cy="13" r="7"/><circle cx="11" cy="13" r="4"/><circle cx="11" cy="13" r="1.2" fill="currentColor" stroke="none"/><path d="M15.5 8.5L21 3M21 3h-4.4M21 3v4.4"/></svg>
+          </span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= LUCKY DRAW ================= -->
+  <section class="section rewards" id="lucky-draw">
+    <span class="rewards__glow rewards__glow--tr" aria-hidden="true"></span>
+    <span class="rewards__glow rewards__glow--bl" aria-hidden="true"></span>
+    <span class="rewards__dots rewards__dots--tr" aria-hidden="true"></span>
+    <span class="rewards__dots rewards__dots--br" aria-hidden="true"></span>
+
+    <div class="container">
+      <div class="rewards__head reveal">
+
+        <div class="rewards__annotate rewards__annotate--left" aria-hidden="true">
+          <span class="rewards__gift">
+            <svg viewBox="0 0 64 64">
+              <path d="M32 22c-7-16-24-11-17 0" fill="none" stroke="#0f9d73" stroke-width="3" stroke-linecap="round"/>
+              <path d="M32 22c7-16 24-11 17 0" fill="none" stroke="#0f9d73" stroke-width="3" stroke-linecap="round"/>
+              <rect x="9" y="22" width="46" height="12" rx="3" fill="#14b389"/>
+              <rect x="9" y="30" width="46" height="27" rx="4" fill="#ffffff" stroke="#0c2340" stroke-width="1.3"/>
+              <rect x="27" y="22" width="10" height="35" fill="#0f9d73"/>
+              <path d="M9 34h46" stroke="#e7f4ef" stroke-width="1"/>
+            </svg>
+            <span class="rewards__gift-star rewards__gift-star--1">✦</span>
+            <span class="rewards__gift-star rewards__gift-star--2">✦</span>
+            <span class="rewards__gift-star rewards__gift-star--3">✧</span>
+          </span>
+          <span class="rewards__script">Play<br>Participate<br>Win</span>
+          <svg class="rewards__script-arrow" viewBox="0 0 60 46" aria-hidden="true">
+            <path d="M4 6c8 4 10 20 34 30" fill="none" stroke="#0c2340" stroke-width="1.6" stroke-linecap="round"/>
+            <path d="M27 33l11 3-3-11" fill="none" stroke="#0c2340" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+
+        <div class="rewards__annotate rewards__annotate--right" aria-hidden="true">
+          <span class="rewards__script rewards__script--right">Rewards<br>Make Every Day<br>Brighter!</span>
+        </div>
+
+        <span class="rewards__badge">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="8" width="18" height="4" rx="1"/><path d="M12 8v13"/><path d="M19 12v7a2 2 0 01-2 2H7a2 2 0 01-2-2v-7"/><path d="M7.5 8a2.5 2.5 0 010-5C11 3 12 8 12 8"/><path d="M16.5 8a2.5 2.5 0 000-5C13 3 12 8 12 8"/></svg>
+          Get Rewarded
+        </span>
+        <h2 class="display-heading">Our Lucky Draw.<br><span class="text-emerald">Your Chance To Win.</span></h2>
+        <p class="rewards__sub">Simple Steps. Exciting Rewards. A Bigger Tomorrow.</p>
+      </div>
+
+      <div class="rewards__steps">
+        <div class="rewards__step reveal" data-accent="gold">
+          <span class="rewards__num">01</span>
+          <span class="rewards__icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><circle cx="10" cy="8" r="4"/><path d="M2 21c0-4.4 3.6-8 8-8s8 3.6 8 8"/><path d="M19 8v6M22 11h-6"/></svg>
+          </span>
+          <h3>Join</h3>
+          <p>Become a member of Inspire Business Group to automatically qualify for every draw.</p>
+        </div>
+
+        <span class="rewards__chevron" aria-hidden="true">
+          <svg viewBox="0 0 20 20"><path d="M7 4l6 6-6 6"/></svg>
+        </span>
+
+        <div class="rewards__step reveal" data-accent="purple">
+          <span class="rewards__num">02</span>
+          <span class="rewards__icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><circle cx="9" cy="20" r="1.4"/><circle cx="17" cy="20" r="1.4"/><path d="M2 3h2l2.2 12a2 2 0 002 1.6h8.4a2 2 0 002-1.6L21 7H6"/></svg>
+          </span>
+          <h3>Participate</h3>
+          <p>Take part in our ongoing purchases and promotions across any business vertical.</p>
+        </div>
+
+        <span class="rewards__chevron" aria-hidden="true">
+          <svg viewBox="0 0 20 20"><path d="M7 4l6 6-6 6"/></svg>
+        </span>
+
+        <div class="rewards__step reveal" data-accent="rose">
+          <span class="rewards__num">03</span>
+          <span class="rewards__icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><circle cx="9" cy="8" r="3.4"/><path d="M2 20c0-3.6 3-6.6 7-6.6s7 3 7 6.6"/><circle cx="18" cy="8" r="2.6"/><path d="M17 13.6c2.6.5 4.6 2.6 5 5.4"/><path d="M6.5 20l2 2 3.5-4"/></svg>
+          </span>
+          <h3>Get Selected</h3>
+          <p>Entries are pooled and winners are picked through a fair, transparent draw.</p>
+        </div>
+
+        <span class="rewards__chevron" aria-hidden="true">
+          <svg viewBox="0 0 20 20"><path d="M7 4l6 6-6 6"/></svg>
+        </span>
+
+        <div class="rewards__step reveal" data-accent="teal">
+          <span class="rewards__num">04</span>
+          <span class="rewards__icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><path d="M7 4h10v4a5 5 0 01-10 0V4z"/><path d="M7 5H4a3 3 0 003 5M17 5h3a3 3 0 01-3 5"/><path d="M12 13v4M8 21h8M9 21c0-2 1.3-3 3-3s3 1 3 3"/></svg>
+          </span>
+          <h3>Win Big</h3>
+          <p>Take home exciting rewards and prizes across our partner businesses.</p>
+        </div>
+      </div>
+
+      <p class="rewards__tagline">More Participation <i>|</i> More Opportunities <i>|</i> A Brighter Tomorrow</p>
+
+      <div class="lucky-cta reveal">
+        <a href="#contact" class="btn btn--gold btn--lg">Enter The Draw</a>
+      </div>
+    </div>
+  </section>
+
+ 
+
+  <!-- ================= WHY INSPIRE BUSINESS GROUP ================= -->
+  <section class="why section">
+    <div class="container">
+      <div class="section__head section__head--center section__head--tight reveal">
+        <p class="eyebrow eyebrow--ruled">Why Inspire Business Group</p>
+        <h2 class="display-heading">Built Around Trust.<br><span class="text-gold">Driven By Growth.</span></h2>
+        <div class="feature-divider" aria-hidden="true">
+          <span></span>
+          <svg viewBox="0 0 24 24"><path d="M12 22V10"/><path d="M12 10C12 6 8 4 4 4c0 4 2 8 8 8z"/><path d="M12 14c0-4 4-6 8-6 0 4-2 8-8 8"/></svg>
+          <span></span>
+        </div>
+        <p class="feature-tagline">People <i>|</i> Partnership <i>|</i> Progress <i>|</i> A Brighter Tomorrow</p>
+      </div>
+
+      <div class="feature-grid">
+        <div class="feature-card reveal" data-accent="gold">
+          <span class="feature-card__corner"></span>
+          <span class="feature-card__num">01</span>
+          <span class="feature-card__icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="5"/><path d="M9.5 8l1.6 1.6L14.5 6"/><path d="M8.5 12.6L6 21l6-3.4 6 3.4-2.5-8.4"/></svg>
+          </span>
+          <h3>Quality</h3>
+          <span class="feature-card__rule"></span>
+          <p>Delivering products and experiences with an unwavering commitment to quality.</p>
+        </div>
+        <div class="feature-card reveal" data-accent="blue">
+          <span class="feature-card__corner"></span>
+          <span class="feature-card__num">02</span>
+          <span class="feature-card__icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><path d="M3 11l4-4 4 4-1 1 3 3-1.4 1.4-3-3-1 1-3-3z"/><path d="M21 11l-4-4-4 4 1 1-3 3 1.4 1.4 3-3 1 1 3-3z"/></svg>
+          </span>
+          <h3>Trust</h3>
+          <span class="feature-card__rule"></span>
+          <p>Building transparent and lasting relationships with every partner and customer.</p>
+        </div>
+        <div class="feature-card reveal" data-accent="green">
+          <span class="feature-card__corner"></span>
+          <span class="feature-card__num">03</span>
+          <span class="feature-card__icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><path d="M12 4.5l.8 1.7 1.9.2-1.4 1.3.3 1.9-1.6-.9-1.6.9.3-1.9-1.4-1.3 1.9-.2z" fill="currentColor" stroke="none"/><circle cx="6" cy="14" r="2.6"/><circle cx="18" cy="14" r="2.6"/><path d="M2 21c0-2.8 1.8-5 4-5s4 2.2 4 5M14 21c0-2.8 1.8-5 4-5s4 2.2 4 5"/></svg>
+          </span>
+          <h3>Customer First</h3>
+          <span class="feature-card__rule"></span>
+          <p>Putting customer satisfaction at the center of every decision we make.</p>
+        </div>
+        <div class="feature-card reveal" data-accent="red">
+          <span class="feature-card__corner"></span>
+          <span class="feature-card__num">04</span>
+          <span class="feature-card__icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><circle cx="11" cy="12" r="8"/><path d="M3 12h16M11 4c2.5 2.2 2.5 13.8 0 16M11 4c-2.5 2.2-2.5 13.8 0 16"/><path d="M16 4l5 1-1 5"/><path d="M21 5l-7 7"/></svg>
+          </span>
+          <h3>Wide Reach</h3>
+          <span class="feature-card__rule"></span>
+          <p>Creating an expanding ecosystem of opportunity across multiple markets.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= FOUNDER ================= -->
+  <section class="section founder section--dark" id="founder">
+    <div class="container founder__grid">
+      <div class="founder__avatar reveal">
+        <span class="founder__avatar-ring" aria-hidden="true"></span>
+        <span class="founder__avatar-initials">IN</span>
+      </div>
+      <div class="founder__content reveal">
+        <p class="eyebrow eyebrow--light">From The Founder</p>
+        <h2 class="display-heading display-heading--light">A Message From Our Founder</h2>
+        <span class="intro__rule" aria-hidden="true"></span>
+        <p class="founder__quote">"Inspire Business Group was built on a simple belief — that when people, industries and ideas come together under one trusted umbrella, everyone grows faster. Every business we've built, from electronics to real estate, exists to give our community more opportunity, more trust and a brighter tomorrow."</p>
+        <div class="founder__sign">
+          <span class="founder__name">Founder Name</span>
+          <span class="founder__role">Founder &amp; Chairman, Inspire Business Group</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= TESTIMONIALS ================= -->
+  <section class="section testimonials" id="testimonials">
+    <div class="container">
+      <div class="section__head section__head--center section__head--tight reveal">
+        <p class="eyebrow eyebrow--ruled">Voices Of Trust</p>
+        <h2 class="display-heading">What Our <span class="text-gold">Members</span> Say</h2>
+        <p class="feature-tagline">Real People. Real Experiences. A Stronger Tomorrow Together.</p>
+      </div>
+    </div>
+
+    <div class="testi-wrap">
+      <div class="testi">
+        <button class="testi__arrow testi__arrow--prev" id="testiPrev" aria-label="Previous testimonial">
+          <svg viewBox="0 0 20 20"><path d="M12 4l-6 6 6 6"/></svg>
+        </button>
+
+        <div class="testi__track" id="testiTrack">
+          <article class="testi__card reveal">
+            <div class="testi__top">
+              <span class="testi__quote" aria-hidden="true">&ldquo;</span>
+              <span class="testi__stars" aria-hidden="true">★★★★★</span>
+            </div>
+            <p class="testi__text">Inspire Business Group has given me a platform to grow my income and build a better future for my family. The support and guidance are truly exceptional.</p>
+            <span class="testi__divider"></span>
+            <div class="testi__person">
+              <span class="testi__avatar" data-accent="navy">S</span>
+              <span class="testi__person-info">
+                <span class="testi__name">Suresh B</span>
+                <span class="testi__role">Member</span>
+              </span>
+            </div>
+          </article>
+
+          <article class="testi__card reveal">
+            <div class="testi__top">
+              <span class="testi__quote" aria-hidden="true">&ldquo;</span>
+              <span class="testi__stars" aria-hidden="true">★★★★★</span>
+            </div>
+            <p class="testi__text">The business opportunities at Inspire Business Group are genuine and rewarding. I appreciate the transparent system and the helpful team.</p>
+            <span class="testi__divider"></span>
+            <div class="testi__person">
+              <span class="testi__avatar" data-accent="gold">P</span>
+              <span class="testi__person-info">
+                <span class="testi__name">Priya N</span>
+                <span class="testi__role">Customer</span>
+              </span>
+            </div>
+          </article>
+
+          <article class="testi__card reveal">
+            <div class="testi__top">
+              <span class="testi__quote" aria-hidden="true">&ldquo;</span>
+              <span class="testi__stars" aria-hidden="true">★★★★★</span>
+            </div>
+            <p class="testi__text">A trustworthy platform with real growth opportunities. The training and support have helped me gain confidence and achieve my goals.</p>
+            <span class="testi__divider"></span>
+            <div class="testi__person">
+              <span class="testi__avatar" data-accent="navy">R</span>
+              <span class="testi__person-info">
+                <span class="testi__name">Ramesh K</span>
+                <span class="testi__role">Member</span>
+              </span>
+            </div>
+          </article>
+
+          <article class="testi__card reveal">
+            <div class="testi__top">
+              <span class="testi__quote" aria-hidden="true">&ldquo;</span>
+              <span class="testi__stars" aria-hidden="true">★★★★★</span>
+            </div>
+            <p class="testi__text">Being part of Inspire Business Group has been a life-changing experience. Great leadership, excellent support, and a bright future ahead.</p>
+            <span class="testi__divider"></span>
+            <div class="testi__person">
+              <span class="testi__avatar" data-accent="gold">M</span>
+              <span class="testi__person-info">
+                <span class="testi__name">Meghana S</span>
+                <span class="testi__role">Promoter</span>
+              </span>
+            </div>
+          </article>
+
+          <article class="testi__card reveal">
+            <div class="testi__top">
+              <span class="testi__quote" aria-hidden="true">&ldquo;</span>
+              <span class="testi__stars" aria-hidden="true">★★★★★</span>
+            </div>
+            <p class="testi__text">Inspire Business Group gave my small business the visibility and network it needed. A supportive community and a genuine platform.</p>
+            <span class="testi__divider"></span>
+            <div class="testi__person">
+              <span class="testi__avatar" data-accent="navy">A</span>
+              <span class="testi__person-info">
+                <span class="testi__name">Anil D</span>
+                <span class="testi__role">Member</span>
+              </span>
+            </div>
+          </article>
+
+          <article class="testi__card reveal">
+            <div class="testi__top">
+              <span class="testi__quote" aria-hidden="true">&ldquo;</span>
+              <span class="testi__stars" aria-hidden="true">★★★★★</span>
+            </div>
+            <p class="testi__text">From my very first interaction, I felt valued. The team's transparency and consistent support have made all the difference.</p>
+            <span class="testi__divider"></span>
+            <div class="testi__person">
+              <span class="testi__avatar" data-accent="gold">K</span>
+              <span class="testi__person-info">
+                <span class="testi__name">Kavya S</span>
+                <span class="testi__role">Customer</span>
+              </span>
+            </div>
+          </article>
+        </div>
+
+        <button class="testi__arrow testi__arrow--next" id="testiNext" aria-label="Next testimonial">
+          <svg viewBox="0 0 20 20"><path d="M8 4l6 6-6 6"/></svg>
+        </button>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="testi__dots" id="testiDots" aria-hidden="true"></div>
+      <p class="feature-tagline">Grow Together <i>|</i> Succeed Together</p>
+    </div>
+  </section>
+
+  <!-- ================= MEMBER JOURNEY ================= -->
+  <section class="section member" id="member-journey">
+    <span class="member__glow" aria-hidden="true"></span>
+    <span class="member__dots member__dots--tr" aria-hidden="true"></span>
+    <span class="member__dots member__dots--bl" aria-hidden="true"></span>
+
+    <span class="member__leaf" aria-hidden="true">
+      <svg viewBox="0 0 100 140" fill="none" stroke="currentColor" stroke-width="1.6">
+        <path d="M50 132V18"/>
+        <path d="M50 98c-21-6-31-25-25-48 23 2 35 17 35 35"/>
+        <path d="M50 66c21-6 31-25 25-48-23 2-35 17-35 35"/>
+        <path d="M50 38c-15-4-23-17-19-33 17 2 27 13 27 27"/>
+      </svg>
+    </span>
+
+    <span class="member__plane" aria-hidden="true">
+      <svg class="member__plane-trail" viewBox="0 0 170 100" fill="none">
+        <path d="M4 76c42 10 74-42 138-58" stroke="var(--gold-500)" stroke-width="2" stroke-dasharray="3 8" stroke-linecap="round"/>
+      </svg>
+      <svg class="member__plane-icon" viewBox="0 0 24 24" fill="currentColor">
+        <path d="M2 12l19-9-7 19-3-7-9-3z"/>
+      </svg>
+    </span>
+
+    <div class="container">
+      <div class="section__head section__head--center reveal">
+        <p class="eyebrow eyebrow--ruled">Get Involved</p>
+        <h2 class="display-heading">Your Path Into<br>The <span class="text-gold member__underline">Group</span></h2>
+        <p class="member__sub">Simple Steps. Bigger Opportunities. A Brighter Tomorrow.</p>
+      </div>
+
+      <div class="member-path">
+        <div class="member-path__line" aria-hidden="true"></div>
+        <div class="member-step reveal" data-accent="gold">
+          <span class="member-step__badge" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><circle cx="9" cy="8" r="3.6"/><path d="M2 20c0-4 3.2-7 7-7s7 3 7 7v1H2v-1z"/><circle cx="17.5" cy="9" r="2.6"/><path d="M15 13c3 .3 6 2.6 6 6.6V21h-4"/></svg>
+          </span>
+          <span class="member-step__row">
+            <span class="member-step__num">01</span>
+            <h3>Join</h3>
+          </span>
+          <span class="member-step__rule"></span>
+          <p>Become part of the Inspire Business Group ecosystem.</p>
+        </div>
+
+        <span class="member-path__chevron" aria-hidden="true">
+          <svg viewBox="0 0 20 20"><path d="M7 4l6 6-6 6"/></svg>
+        </span>
+
+        <div class="member-step reveal" data-accent="blue">
+          <span class="member-step__badge" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><path d="M9 12a4 4 0 004 4h3a4 4 0 000-8h-1"/><path d="M15 12a4 4 0 00-4-4H8a4 4 0 000 8h1"/></svg>
+          </span>
+          <span class="member-step__row">
+            <span class="member-step__num">02</span>
+            <h3>Connect</h3>
+          </span>
+          <span class="member-step__rule"></span>
+          <p>Build relationships and discover opportunities.</p>
+        </div>
+
+        <span class="member-path__chevron" aria-hidden="true">
+          <svg viewBox="0 0 20 20"><path d="M7 4l6 6-6 6"/></svg>
+        </span>
+
+        <div class="member-step reveal" data-accent="green">
+          <span class="member-step__badge" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><path d="M4 20V13M10 20V9M16 20v-6"/><path d="M3 12l5-5 4 3 7-7"/><path d="M15 3h5v5"/></svg>
+          </span>
+          <span class="member-step__row">
+            <span class="member-step__num">03</span>
+            <h3>Grow</h3>
+          </span>
+          <span class="member-step__rule"></span>
+          <p>Develop your network and business potential.</p>
+        </div>
+
+        <span class="member-path__chevron" aria-hidden="true">
+          <svg viewBox="0 0 20 20"><path d="M7 4l6 6-6 6"/></svg>
+        </span>
+
+        <div class="member-step reveal" data-accent="purple">
+          <span class="member-step__badge" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><path d="M7 4h10v4a5 5 0 01-10 0V4z"/><path d="M7 5H4a3 3 0 003 5M17 5h3a3 3 0 01-3 5"/><path d="M12 13v4M8 21h8M9 21c0-2 1.3-3 3-3s3 1 3 3"/></svg>
+          </span>
+          <span class="member-step__row">
+            <span class="member-step__num">04</span>
+            <h3>Lead</h3>
+          </span>
+          <span class="member-step__rule"></span>
+          <p>Progress toward greater responsibility and leadership.</p>
+        </div>
+      </div>
+
+      <p class="member__tagline">Together Towards A Brighter Future</p>
+    </div>
+  </section>
+
+  <!-- ================= FINAL CTA ================= -->
+  <section class="final-cta section" id="join">
+    <canvas id="ctaCanvas" class="final-cta__canvas"></canvas>
+    <div class="container final-cta__inner reveal">
+      <h2 class="display-heading display-heading--light">Your Dream Has<br>A Place Here.</h2>
+      <p>Join a growing ecosystem where ideas become opportunities and opportunities become lasting success.</p>
+      <div class="final-cta__ctas">
+        <a href="#contact" class="btn btn--gold btn--lg">Join Inspire Business Group</a>
+        <a href="#contact" class="btn btn--ghost btn--lg">Talk To Us</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- ================= FOOTER ================= -->
+<footer class="footer" id="contact">
+  <div class="container footer__grid">
+    <div class="footer__brand">
+      <a href="#home" class="nav__logo nav__logo--footer">
+        <img src="images/logo.png" alt="Inspire Business Group Pvt Ltd" class="nav__logo-img nav__logo-img--footer" />
+      </a>
+      <p>A diversified business ecosystem connecting people, products and opportunity across industries — built on trust, quality and shared growth.</p>
+    </div>
+
+    <div class="footer__col">
+      <h4>Company</h4>
+      <a href="#about">About</a>
+      <a href="#lucky-draw">Lucky Draw</a>
+      <a href="gallery.html">Gallery</a>
+    </div>
+
+    <div class="footer__col">
+      <h4>Connect</h4>
+      <a href="#contact">Contact Us</a>
+      <a href="mailto:hello@inspirebusinessgroup.com">hello@inspirebusinessgroup.com</a>
+      <a href="tel:+911234567890">+91 12345 67890</a>
+      <div class="footer__social">
+        <a href="#" aria-label="Instagram">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.3" cy="6.7" r="0.6" fill="currentColor" stroke="none"/></svg>
+        </a>
+        <a href="#" aria-label="Facebook">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M14.5 21v-7.5H17l.4-3H14.5V8.5c0-.87.24-1.46 1.5-1.46H17.5V4.35C17.24 4.32 16.36 4.24 15.34 4.24c-2.13 0-3.59 1.3-3.59 3.68v2.05H9.25v3H11.75V21z"/></svg>
+        </a>
+        <a href="#" aria-label="YouTube">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="2.5" y="6" width="19" height="12" rx="4"/><path d="M10.3 9.6l5 2.4-5 2.4z" fill="currentColor" stroke="none"/></svg>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <div class="container footer__bottom">
+    <p>© <span id="year"></span> Inspire Business Group Pvt. Ltd. All rights reserved.</p>
+    <div class="footer__legal">
+      <a href="#">Privacy Policy</a>
+      <a href="#">Terms of Service</a>
+    </div>
+  </div>
+</footer>
+
+<script src="js/main.js?v=4"></script>
+</body>
+</html>
