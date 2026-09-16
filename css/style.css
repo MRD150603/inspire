@@ -211,48 +211,92 @@ button{font-family:inherit;cursor:pointer;border:none;background:none;}
 .nav__burger.is-open span:nth-child(3){transform:translateY(-9.5px) rotate(-45deg);}
 
 /* ============ LANGUAGE TOGGLE (Google Translate) ============ */
-#google_translate_element,
-.goog-te-banner-frame.skiptranslate,
-.goog-te-gadget-icon,
-body > .skiptranslate{display:none !important;}
-body{top:0 !important;}
-.goog-text-highlight{background:none !important;box-shadow:none !important;}
+/* Google's native "G  Select Language ▾" widget (layout: SIMPLE in
+   translate.js), just boxed in a white pill. Deliberately does NOT
+   override the gadget's own icon/text/separator/arrow colors or fonts —
+   that native styling (colorful G logo, blue link text, gray arrow) is
+   exactly the intended look, and overriding font-size on it breaks the
+   inline pixel offsets Google computes for that icon/arrow at its default
+   size.
+   Two separate widget instances exist (translate.js inits both):
+   - .nav__translate--desktop lives inside .nav__actions, in normal flow.
+   - .nav__translate--mobile lives OUTSIDE <header class="nav"> as a sibling
+     in <body>, deliberately NOT nested inside the header. .nav.is-scrolled
+     applies backdrop-filter, and any ancestor with backdrop-filter/filter/
+     transform becomes the containing block for position:fixed descendants —
+     nesting the fixed mobile pill inside <header> made it jump/clip to the
+     navbar as soon as the page was scrolled. Keeping it outside means it
+     always stays fixed to the viewport, not the header. */
+.nav__translate{
+  align-items:center;
+  z-index:150;
+  background:var(--white);
+  border:1px solid var(--gray-200);
+  border-radius:6px;
+  box-shadow:var(--shadow-md);
+  cursor:pointer;
+  padding:5px 10px;
+}
+.nav__translate--desktop{display:none;}
+.nav__translate--mobile{
+  display:inline-flex;
+  position:fixed;
+  right:14px;
+  bottom:14px;
+}
+@media(min-width:901px){
+  .nav__translate--desktop{
+    display:inline-flex;
+    box-shadow:var(--shadow-sm);
+  }
+  .nav__translate--mobile{display:none;}
+}
+/* Google positions the gadget's icon/text/separator/arrow with inline
+   pixel offsets computed against a plain default font context. The rest of
+   this page sets a different ambient font-size/line-height/font-family on
+   every element by default, which throws those offsets off and makes the
+   icon/text/arrow stack vertically instead of sitting in one row. Reset
+   layout-affecting properties back to a plain baseline — but leave color
+   untouched so Google's own blue link / gray arrow still show. */
+.nav__translate .goog-te-gadget,
+.nav__translate .goog-te-gadget *{
+  position:static !important;
+  float:none !important;
+  top:auto !important;
+  left:auto !important;
+  margin:0 !important;
+  font-family:arial,sans-serif !important;
+  font-size:13px !important;
+  line-height:normal !important;
+}
+.nav__translate .goog-te-gadget-simple{
+  white-space:nowrap;
+}
+/* The page-wide `img{display:block}` reset (used elsewhere to kill the
+   default inline-image gap) turns Google's icon/spacer <img> tags into
+   block boxes, which forces each onto its own line instead of sitting
+   inline next to the text — undo it just for this widget. */
+.nav__translate .goog-te-gadget img{
+  display:inline !important;
+}
 
-.lang-toggle{
-  display:flex;align-items:center;gap:2px;
-  padding:3px;
-  border-radius:999px;
-  background:rgba(250,248,243,.12);
-  border:1px solid rgba(250,248,243,.28);
-  transition:background .35s var(--ease), border-color .35s var(--ease);
-}
-.nav.is-scrolled .lang-toggle{
-  background:rgba(12,20,50,.06);
-  border-color:rgba(12,20,50,.14);
-}
-.lang-toggle__btn{
-  padding:6px 13px;
-  border-radius:999px;
-  font-size:11.5px;font-weight:700;letter-spacing:.06em;
-  color:var(--off-white);
-  opacity:.72;
-  transition:background .3s var(--ease), color .3s var(--ease), opacity .3s var(--ease), box-shadow .3s var(--ease);
-}
-.nav.is-scrolled .lang-toggle__btn{color:var(--navy-800);}
-.lang-toggle__btn:hover{opacity:1;}
-.lang-toggle__btn.is-active{
-  background:var(--off-white);
-  color:var(--navy-900);
-  opacity:1;
-  box-shadow:0 2px 8px rgba(6,10,23,.18);
-}
-.nav.is-scrolled .lang-toggle__btn.is-active{
-  background:var(--navy-900);
-  color:var(--off-white);
-}
-@media(max-width:340px){
-  .lang-toggle__btn{padding:5px 10px;font-size:10.5px;}
-}
+/* Google's injected top banner/toolbar (logo bar, "Translated to", "Show
+   original", "Options", close button, blue bar) must never appear once a
+   language has been selected. Its class names are obfuscated build hashes
+   with no stable public API, but Google consistently gives that one frame
+   an id ending in ".container" (unlike the language-picker popup or the
+   voting/tooltip frames, which stay id-less) — target that instead so the
+   popup this same SIMPLE layout opens on click is never accidentally hidden. */
+iframe[id$=".container"],
+.goog-te-banner-frame,
+.goog-te-balloon-frame,
+.goog-tooltip,
+.goog-tooltip:hover,
+#goog-gt-tt{display:none !important;visibility:hidden !important;}
+/* Google injects an inline top/margin offset on <body> to make room for the
+   banner; force it back so the page never shifts or gains extra top space. */
+body{top:0 !important;margin-top:0 !important;}
+.goog-text-highlight{background:none !important;box-shadow:none !important;}
 
 .mobile-menu{
   position:fixed;inset:0;
@@ -267,12 +311,10 @@ body{top:0 !important;}
 .mobile-menu.is-open{transform:translateY(0);opacity:1;pointer-events:auto;}
 .mobile-menu__link{font-family:var(--ff-display);font-size:26px;color:var(--off-white);}
 .mobile-menu__cta{margin-top:16px;}
-.mobile-menu__lang{margin-bottom:6px;}
 
 @media(max-width:900px){
   .nav__links{display:none;}
   .nav__burger{display:flex;}
-  .nav__actions .lang-toggle{display:none;}
 }
 @media(max-width:600px){
   .nav{padding:6px 0;}
