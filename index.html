@@ -8,21 +8,24 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@300;400;500;600;700;800&family=Caveat:wght@600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/style.css?v=13" />
+<link rel="stylesheet" href="css/style.css?v=17" />
 <link rel="icon" type="image/png" href="images/logo.png">
+<script src="js/translate.js?v=1"></script>
 </head>
 <body>
 
 <!-- ================= NAVBAR ================= -->
 <header class="nav" id="nav">
   <div class="nav__inner container">
-    <a href="#home" class="nav__logo" aria-label="Inspire Business Group Home">
-      <img src="images/logo-transparent.png" alt="Inspire Business Group Pvt Ltd" class="nav__logo-img" />
-      <span class="nav__wordmark">
+    <div class="nav__brand">
+      <a href="#home" class="nav__logo" aria-label="Inspire Business Group Home">
+        <img src="images/logo-transparent.png" alt="Inspire Business Group Pvt Ltd" class="nav__logo-img" />
+      </a>
+      <a href="#home" class="nav__wordmark" aria-label="Inspire Business Group Home">
         <span class="nav__wordmark-main">Inspire Business Group</span>
         <span class="nav__wordmark-sub">Pvt Ltd</span>
-      </span>
-    </a>
+      </a>
+    </div>
 
     <nav class="nav__links" id="navLinks">
       <a href="index.html" class="nav__link is-active">Home</a>
@@ -33,6 +36,10 @@
     </nav>
 
     <div class="nav__actions">
+      <div class="lang-toggle" role="group" aria-label="Select language">
+        <button type="button" class="lang-toggle__btn is-active notranslate" data-lang="en" aria-pressed="true">ENG</button>
+        <button type="button" class="lang-toggle__btn notranslate" data-lang="kn" aria-pressed="false">KAN</button>
+      </div>
       <a href="#join" class="btn btn--gold btn--sm">Join Us <span>→</span></a>
       <button class="nav__burger" id="navBurger" aria-label="Toggle menu" aria-expanded="false">
         <span></span><span></span><span></span>
@@ -41,13 +48,19 @@
   </div>
 </header>
 
+<div id="google_translate_element"></div>
+
 <!-- Mobile menu panel -->
 <div class="mobile-menu" id="mobileMenu">
-  <a href="#home" class="mobile-menu__link">Home</a>
-  <a href="#about" class="mobile-menu__link">About</a>
-  <a href="#lucky-draw" class="mobile-menu__link">Lucky Draw</a>
+  <div class="lang-toggle mobile-menu__lang" role="group" aria-label="Select language">
+    <button type="button" class="lang-toggle__btn is-active notranslate" data-lang="en" aria-pressed="true">ENG</button>
+    <button type="button" class="lang-toggle__btn notranslate" data-lang="kn" aria-pressed="false">KAN</button>
+  </div>
+  <a href="index.html" class="mobile-menu__link">Home</a>
+  <a href="about.html" class="mobile-menu__link">About</a>
+  <a href="lucky-draw.html" class="mobile-menu__link">Lucky Draw</a>
   <a href="gallery.html" class="mobile-menu__link">Gallery</a>
-  <a href="#contact" class="mobile-menu__link">Contact</a>
+  <a href="contact.html" class="mobile-menu__link">Contact</a>
   <a href="#join" class="btn btn--gold mobile-menu__cta">Join Us</a>
 </div>
 
@@ -67,7 +80,7 @@
           <h1 class="hero__headline reveal">Where Dreams<br>Meet <span class="text-gold">Opportunity.</span></h1>
           <p class="hero__sub reveal">Inspire Business Group brings diverse businesses, people and opportunities together to create a growing ecosystem built on trust, innovation and shared success.</p>
           <div class="hero__ctas reveal">
-            <a href="gallery.html" class="btn btn--gold">Explore Gallery <span>→</span></a>
+            <a href="about.html" class="btn btn--gold">About Us <span>→</span></a>
             <a href="#join" class="btn btn--ghost">Join Us</a>
           </div>
           <div class="hero__stats reveal">
@@ -102,78 +115,78 @@
         <div class="hero__track" id="heroTrack">
 
           <article class="hero__slide" data-accent="orange">
-            <img class="hero__slide-img" src="images/Electronics%20&amp;%20Home%20Appliances.png" alt="Electronics and home appliances" loading="lazy" />
+            <img class="hero__slide-img" src="images/hero1.png" alt="Electronics and home appliances" loading="lazy" />
             <svg class="hero__slide-icon" viewBox="0 0 20 20"><rect x="2" y="3" width="16" height="11" rx="1.5"/><line x1="7" y1="17" x2="13" y2="17"/><line x1="10" y1="14" x2="10" y2="17"/></svg>
             <span class="hero__slide-num">01</span>
             <h3 class="hero__slide-title">Electronics &amp; Home Appliances</h3>
             <p class="hero__slide-desc">Trusted, modern electronics and appliances that bring convenience and quality into every home.</p>
-            <a href="gallery.html" class="hero__slide-more"><span class="hero__slide-more-icon">→</span>Explore More</a>
+            <a href="javascript:void(0)" class="hero__slide-more"><span class="hero__slide-more-icon">→</span>Explore More</a>
             <span class="hero__slide-divider"></span>
             <p class="hero__slide-tag">Smarter Homes<br>Brighter Lives</p>
           </article>
 
           <article class="hero__slide" data-accent="gold">
-            <img class="hero__slide-img" src="images/Gold%20&amp;%20Automobiles.png" alt="Gold and automobiles" loading="lazy" />
+            <img class="hero__slide-img" src="images/hero2.png" alt="Gold and automobiles" loading="lazy" />
             <svg class="hero__slide-icon" viewBox="0 0 20 20"><path d="M3 13l1.5-5A2 2 0 016.4 6.5h7.2A2 2 0 0115.5 8L17 13"/><rect x="2" y="13" width="16" height="4" rx="1"/><circle cx="6" cy="17" r="1.4"/><circle cx="14" cy="17" r="1.4"/></svg>
             <span class="hero__slide-num">02</span>
             <h3 class="hero__slide-title">Gold &amp; Automobiles</h3>
             <p class="hero__slide-desc">Premium gold and automotive offerings built on trust, purity and lasting value.</p>
-            <a href="gallery.html" class="hero__slide-more"><span class="hero__slide-more-icon">→</span>Explore More</a>
+            <a href="javascript:void(0)" class="hero__slide-more"><span class="hero__slide-more-icon">→</span>Explore More</a>
             <span class="hero__slide-divider"></span>
             <p class="hero__slide-tag">Lasting Value<br>A Stronger Tomorrow</p>
           </article>
 
           <article class="hero__slide" data-accent="teal">
-            <img class="hero__slide-img" src="images/Tourism%20&amp;%20Travel.png" alt="Tourism and travel" loading="lazy" />
+            <img class="hero__slide-img" src="images/hero3.png" alt="Tourism and travel" loading="lazy" />
             <svg class="hero__slide-icon" viewBox="0 0 20 20"><path d="M2 11.5L18 2l-6.5 16-2-6.5L2 11.5z"/></svg>
             <span class="hero__slide-num">03</span>
             <h3 class="hero__slide-title">Tourism &amp; Travel</h3>
             <p class="hero__slide-desc">Curated journeys and travel experiences designed around comfort, discovery and ease.</p>
-            <a href="gallery.html" class="hero__slide-more"><span class="hero__slide-more-icon">→</span>Explore More</a>
+            <a href="javascript:void(0)" class="hero__slide-more"><span class="hero__slide-more-icon">→</span>Explore More</a>
             <span class="hero__slide-divider"></span>
             <p class="hero__slide-tag">New Places<br>Lasting Memories</p>
           </article>
 
           <article class="hero__slide" data-accent="orange">
-            <img class="hero__slide-img" src="images/Furniture.png" alt="Modern furniture" loading="lazy" />
+            <img class="hero__slide-img" src="images/hero4.png" alt="Modern furniture" loading="lazy" />
             <svg class="hero__slide-icon" viewBox="0 0 20 20"><path d="M4 11V8a2 2 0 012-2h8a2 2 0 012 2v3"/><rect x="2" y="11" width="16" height="5" rx="1.4"/><line x1="3.5" y1="16" x2="3.5" y2="18"/><line x1="16.5" y1="16" x2="16.5" y2="18"/></svg>
             <span class="hero__slide-num">04</span>
             <h3 class="hero__slide-title">Furniture</h3>
             <p class="hero__slide-desc">Thoughtfully crafted furniture that blends comfort, durability and modern design.</p>
-            <a href="gallery.html" class="hero__slide-more"><span class="hero__slide-more-icon">→</span>Explore More</a>
+            <a href="javascript:void(0)" class="hero__slide-more"><span class="hero__slide-more-icon">→</span>Explore More</a>
             <span class="hero__slide-divider"></span>
             <p class="hero__slide-tag">Timeless Design<br>Everyday Comfort</p>
           </article>
 
           <article class="hero__slide" data-accent="gold">
-            <img class="hero__slide-img" src="images/E-Commerce%20&amp;%20FMCG.png" alt="E-commerce and FMCG" loading="lazy" />
+            <img class="hero__slide-img" src="images/hero5.png" alt="E-commerce and FMCG" loading="lazy" />
             <svg class="hero__slide-icon" viewBox="0 0 20 20"><circle cx="7" cy="17" r="1.3"/><circle cx="15" cy="17" r="1.3"/><path d="M2 3h2l1.6 9.4a1.6 1.6 0 001.6 1.3h7a1.6 1.6 0 001.6-1.3L17.5 6H5"/></svg>
             <span class="hero__slide-num">05</span>
             <h3 class="hero__slide-title">E-Commerce &amp; FMCG</h3>
             <p class="hero__slide-desc">Everyday essentials and fast-moving consumer goods delivered through a growing digital marketplace.</p>
-            <a href="gallery.html" class="hero__slide-more"><span class="hero__slide-more-icon">→</span>Explore More</a>
+            <a href="javascript:void(0)" class="hero__slide-more"><span class="hero__slide-more-icon">→</span>Explore More</a>
             <span class="hero__slide-divider"></span>
             <p class="hero__slide-tag">Wide Selection<br>Fast Delivery</p>
           </article>
 
           <article class="hero__slide" data-accent="teal">
-            <img class="hero__slide-img" src="images/Organic%20Agriculture.png" alt="Organic agriculture" loading="lazy" />
+            <img class="hero__slide-img" src="images/hero6.png" alt="Organic agriculture" loading="lazy" />
             <svg class="hero__slide-icon" viewBox="0 0 20 20"><path d="M4 17c8 0 12-4 12-13-9 0-13 4-13 13"/><path d="M4 17c0-4 2-7 5-9"/></svg>
             <span class="hero__slide-num">06</span>
             <h3 class="hero__slide-title">Organic Agriculture</h3>
             <p class="hero__slide-desc">Sustainable, organic farming practices that nurture the land and nourish communities.</p>
-            <a href="gallery.html" class="hero__slide-more"><span class="hero__slide-more-icon">→</span>Explore More</a>
+            <a href="javascript:void(0)" class="hero__slide-more"><span class="hero__slide-more-icon">→</span>Explore More</a>
             <span class="hero__slide-divider"></span>
             <p class="hero__slide-tag">100% Organic<br>Sustainable Growth</p>
           </article>
 
           <article class="hero__slide" data-accent="orange">
-            <img class="hero__slide-img" src="images/Builders%20&amp;%20Developers.png" alt="Real estate and property development" loading="lazy" />
+            <img class="hero__slide-img" src="images/hero7.png" alt="Real estate and property development" loading="lazy" />
             <svg class="hero__slide-icon" viewBox="0 0 20 20"><rect x="4" y="2" width="12" height="16" rx="1"/><line x1="7" y1="6" x2="9" y2="6"/><line x1="11" y1="6" x2="13" y2="6"/><line x1="7" y1="9.5" x2="9" y2="9.5"/><line x1="11" y1="9.5" x2="13" y2="9.5"/><line x1="7" y1="13" x2="9" y2="13"/><line x1="11" y1="13" x2="13" y2="13"/></svg>
             <span class="hero__slide-num">07</span>
             <h3 class="hero__slide-title">Builders &amp; Developers</h3>
             <p class="hero__slide-desc">Real estate and development projects built on quality construction and long-term value.</p>
-            <a href="gallery.html" class="hero__slide-more"><span class="hero__slide-more-icon">→</span>Explore More</a>
+            <a href="javascript:void(0)" class="hero__slide-more"><span class="hero__slide-more-icon">→</span>Explore More</a>
             <span class="hero__slide-divider"></span>
             <p class="hero__slide-tag">Quality Construction<br>Long-Term Value</p>
           </article>
@@ -192,12 +205,12 @@
     <div class="container intro__grid">
       <div class="intro__content reveal">
         <p class="eyebrow">Who We Are</p>
-        <h2 class="display-heading">One Group:<br><span class="text-gold">Many</span><br>Possibilities.</h2>
+        <h2 class="display-heading">One Group:<br><span class="text-gold">Many</span> Possibilities.</h2>
         <span class="intro__rule" aria-hidden="true"></span>
 
         <p class="intro__text">Inspire Business Group is a diversified business ecosystem operating across electronics, gold &amp; automobiles, travel, furniture, e-commerce, agriculture and real estate. We connect entrepreneurs, customers and partners under one trusted umbrella — sharing knowledge, resources and momentum so every venture grows faster together than it could alone.</p>
         <p class="intro__text">From first-time promoters to seasoned business owners, Inspire Business Group gives every member the platform, the network and the support to turn ambition into a sustainable enterprise.</p>
-        <a href="gallery.html" class="btn btn--gold">Discover Inspire Business Group <span>→</span></a>
+        <a href="about.html" class="btn btn--gold">Discover Inspire Business Group <span>→</span></a>
 
         <div class="stats">
           <div class="stat">
@@ -276,7 +289,7 @@
           <span class="biz-card__num">01</span>
           <h3 class="biz-card__title">Electronics &amp; Home Appliances</h3>
           <p class="biz-card__desc">Trusted, modern electronics and appliances that bring convenience and quality into every home.</p>
-          <a href="gallery.html" class="biz-card__more"><span class="biz-card__more-icon">→</span>Explore More</a>
+          <a href="javascript:void(0)" class="biz-card__more"><span class="biz-card__more-icon">→</span>Explore More</a>
           <span class="biz-card__divider"></span>
           <p class="biz-card__tag">Smarter Homes<br>Brighter Lives</p>
         </article>
@@ -286,7 +299,7 @@
           <span class="biz-card__num">02</span>
           <h3 class="biz-card__title">Gold &amp; Automobiles</h3>
           <p class="biz-card__desc">Premium gold and automotive offerings built on trust, purity and lasting value.</p>
-          <a href="gallery.html" class="biz-card__more"><span class="biz-card__more-icon">→</span>Explore More</a>
+          <a href="javascript:void(0)" class="biz-card__more"><span class="biz-card__more-icon">→</span>Explore More</a>
           <span class="biz-card__divider"></span>
           <p class="biz-card__tag">Lasting Value<br>A Stronger Tomorrow</p>
         </article>
@@ -296,7 +309,7 @@
           <span class="biz-card__num">03</span>
           <h3 class="biz-card__title">Tourism &amp; Travel</h3>
           <p class="biz-card__desc">Curated journeys and travel experiences designed around comfort, discovery and ease.</p>
-          <a href="gallery.html" class="biz-card__more"><span class="biz-card__more-icon">→</span>Explore More</a>
+          <a href="javascript:void(0)" class="biz-card__more"><span class="biz-card__more-icon">→</span>Explore More</a>
           <span class="biz-card__divider"></span>
           <p class="biz-card__tag">New Places<br>Lasting Memories</p>
         </article>
@@ -306,7 +319,7 @@
           <span class="biz-card__num">04</span>
           <h3 class="biz-card__title">Furniture</h3>
           <p class="biz-card__desc">Thoughtfully crafted furniture that blends comfort, durability and modern design.</p>
-          <a href="gallery.html" class="biz-card__more"><span class="biz-card__more-icon">→</span>Explore More</a>
+          <a href="javascript:void(0)" class="biz-card__more"><span class="biz-card__more-icon">→</span>Explore More</a>
           <span class="biz-card__divider"></span>
           <p class="biz-card__tag">Timeless Design<br>Everyday Comfort</p>
         </article>
@@ -316,7 +329,7 @@
           <span class="biz-card__num">05</span>
           <h3 class="biz-card__title">E-Commerce &amp; FMCG</h3>
           <p class="biz-card__desc">Everyday essentials and fast-moving consumer goods delivered through a growing digital marketplace.</p>
-          <a href="gallery.html" class="biz-card__more"><span class="biz-card__more-icon">→</span>Explore More</a>
+          <a href="javascript:void(0)" class="biz-card__more"><span class="biz-card__more-icon">→</span>Explore More</a>
           <span class="biz-card__divider"></span>
           <p class="biz-card__tag">Wide Selection<br>Fast Delivery</p>
         </article>
@@ -326,7 +339,7 @@
           <span class="biz-card__num">06</span>
           <h3 class="biz-card__title">Organic Agriculture</h3>
           <p class="biz-card__desc">Sustainable, organic farming practices that nurture the land and nourish communities.</p>
-          <a href="gallery.html" class="biz-card__more"><span class="biz-card__more-icon">→</span>Explore More</a>
+          <a href="javascript:void(0)" class="biz-card__more"><span class="biz-card__more-icon">→</span>Explore More</a>
           <span class="biz-card__divider"></span>
           <p class="biz-card__tag">100% Organic<br>Sustainable Growth</p>
         </article>
@@ -336,7 +349,7 @@
           <span class="biz-card__num">07</span>
           <h3 class="biz-card__title">Builders &amp; Developers</h3>
           <p class="biz-card__desc">Real estate and development projects built on quality construction and long-term value.</p>
-          <a href="gallery.html" class="biz-card__more"><span class="biz-card__more-icon">→</span>Explore More</a>
+          <a href="javascript:void(0)" class="biz-card__more"><span class="biz-card__more-icon">→</span>Explore More</a>
           <span class="biz-card__divider"></span>
           <p class="biz-card__tag">Quality Construction<br>Long-Term Value</p>
         </article>
@@ -852,5 +865,6 @@
 </footer>
 
 <script src="js/main.js?v=4"></script>
+<script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit" async></script>
 </body>
 </html>

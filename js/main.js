@@ -4,8 +4,8 @@
   /* ---------- Sticky nav ---------- */
   var nav = document.getElementById('nav');
   function onScrollNav(){
-    if(window.scrollY > 40){ nav.classList.add('is-scrolled'); }
-    else{ nav.classList.remove('is-scrolled'); }
+    if(window.scrollY > 60){ nav.classList.add('is-scrolled'); }
+    else if(window.scrollY < 20){ nav.classList.remove('is-scrolled'); }
   }
   document.addEventListener('scroll', onScrollNav, {passive:true});
   onScrollNav();

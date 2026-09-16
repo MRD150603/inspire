@@ -8,21 +8,24 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@300;400;500;600;700;800&family=Caveat:wght@600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/style.css?v=13" />
+<link rel="stylesheet" href="css/style.css?v=17" />
 <link rel="icon" type="image/png" href="images/logo.png">
+<script src="js/translate.js?v=1"></script>
 </head>
 <body>
 
 <!-- ================= NAVBAR ================= -->
 <header class="nav" id="nav">
   <div class="nav__inner container">
-    <a href="index.html" class="nav__logo" aria-label="Inspire Business Group Home">
-      <img src="images/logo-transparent.png" alt="Inspire Business Group Pvt Ltd" class="nav__logo-img" />
-      <span class="nav__wordmark">
+    <div class="nav__brand">
+      <a href="index.html" class="nav__logo" aria-label="Inspire Business Group Home">
+        <img src="images/logo-transparent.png" alt="Inspire Business Group Pvt Ltd" class="nav__logo-img" />
+      </a>
+      <a href="index.html" class="nav__wordmark" aria-label="Inspire Business Group Home">
         <span class="nav__wordmark-main">Inspire Business Group</span>
         <span class="nav__wordmark-sub">Pvt Ltd</span>
-      </span>
-    </a>
+      </a>
+    </div>
 
     <nav class="nav__links" id="navLinks">
       <a href="index.html" class="nav__link">Home</a>
@@ -33,6 +36,10 @@
     </nav>
 
     <div class="nav__actions">
+      <div class="lang-toggle" role="group" aria-label="Select language">
+        <button type="button" class="lang-toggle__btn is-active notranslate" data-lang="en" aria-pressed="true">ENG</button>
+        <button type="button" class="lang-toggle__btn notranslate" data-lang="kn" aria-pressed="false">KAN</button>
+      </div>
       <a href="contact.html" class="btn btn--gold btn--sm">Join Us <span>→</span></a>
       <button class="nav__burger" id="navBurger" aria-label="Toggle menu" aria-expanded="false">
         <span></span><span></span><span></span>
@@ -41,8 +48,14 @@
   </div>
 </header>
 
+<div id="google_translate_element"></div>
+
 <!-- Mobile menu panel -->
 <div class="mobile-menu" id="mobileMenu">
+  <div class="lang-toggle mobile-menu__lang" role="group" aria-label="Select language">
+    <button type="button" class="lang-toggle__btn is-active notranslate" data-lang="en" aria-pressed="true">ENG</button>
+    <button type="button" class="lang-toggle__btn notranslate" data-lang="kn" aria-pressed="false">KAN</button>
+  </div>
   <a href="index.html" class="mobile-menu__link">Home</a>
   <a href="about.html" class="mobile-menu__link">About</a>
   <a href="lucky-draw.html" class="mobile-menu__link">Lucky Draw</a>
@@ -137,5 +150,6 @@
 </footer>
 
 <script src="js/main.js?v=4"></script>
+<script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit" async></script>
 </body>
 </html>
