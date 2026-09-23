@@ -31,6 +31,7 @@
     var mobileSlot = document.getElementById('translateMobileSlot');
     if (!widget || !mobileSlot) return;
     var desktopParent = widget.parentNode;
+    var desktopNextSibling = widget.nextSibling;
 
     function placeWidget(isMobile) {
       if (isMobile) {
@@ -38,7 +39,7 @@
         widget.classList.remove('nav__translate--desktop');
         widget.classList.add('nav__translate--mobile');
       } else {
-        if (widget.parentNode !== desktopParent) desktopParent.insertBefore(widget, desktopParent.firstChild);
+        if (widget.parentNode !== desktopParent) desktopParent.insertBefore(widget, desktopNextSibling);
         widget.classList.remove('nav__translate--mobile');
         widget.classList.add('nav__translate--desktop');
       }

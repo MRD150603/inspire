@@ -830,7 +830,7 @@ body{top:0 !important;margin-top:0 !important;}
 @media(max-width:800px){.vm-grid{grid-template-columns:1fr;}}
 
 /* ============ FOUNDER ============ */
-.founder{overflow:hidden;background:var(--off-white);color:var(--navy-900);}
+.founder{overflow:hidden;background:radial-gradient(120% 140% at 50% 0%, #fbf1dc, var(--off-white) 65%);color:var(--navy-900);}
 .founder__grid{display:grid;grid-template-columns:220px 1fr;gap:60px;align-items:center;}
 .founder__avatar{position:relative;width:220px;height:220px;}
 .founder__avatar-ring{position:absolute;inset:0;border-radius:50%;border:1.5px solid rgba(240,191,95,.5);}
